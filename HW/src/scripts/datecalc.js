@@ -1,8 +1,8 @@
-import { DateTime } from "./luxon.js";
+import DateTime from "luxon/src/datetime";
 import { showMessage } from "./utils.js";
 
-export function handleCalcDates(event) { 
-const dateCalcResult = document.getElementById("datecalc__result");
+export function handleCalcDates(event) {
+    const dateCalcResult = document.getElementById("datecalc__result");
     dateCalcResult.innerHTML = "";
     event.preventDefault();
 
@@ -13,7 +13,7 @@ const dateCalcResult = document.getElementById("datecalc__result");
         const diff = diffDates(firstDate, secondDate);
         dateCalcResult.innerHTML = diffToHtml(diff);
     }
-    else dateCalcResult.innerHTML = showMessage("Для расчета промежутка необходимо заполнить оба поля"); 
+    else dateCalcResult.innerHTML = showMessage("Для расчета промежутка необходимо заполнить оба поля");
 }
 
 export function diffDates(firstDate, secondDate) {
@@ -32,3 +32,8 @@ export const diffToHtml = diff => `
         ${diff.months ? 'Месяцев: ' + diff.months : ''} 
         ${diff.days ? 'Дней: ' + diff.days : ''}
     </span>`;
+
+export function dateListener() {
+    const dateCalcForm = document.getElementById("datecalc");
+    dateCalcForm.addEventListener("submit", handleCalcDates);
+}
