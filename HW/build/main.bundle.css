@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: azure;
+    padding: 20px;
+    font-size: 22px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 36px;
+    padding: 5px 20px ;
+}
+
+a:not(:first-child){
+    padding-left: 40px;
+}
+
+a:hover {
+    color: rgb(90, 90, 90);
+    box-shadow: 0px 35px 19px -19px rgba(34, 60, 80, 0.2);
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(226, 254, 255, 0.555);
+    font-size: 22px;
+    margin: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 0px 3px 18px 8px rgba(34, 60, 80, 0.2);
+}
+
+input{
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(226, 254, 255, 0.555);
+    font-size: 22px;
+}
+
+#timer{
+    font-size: 50px;
+    margin: 30px;
+    text-align: center;
+}
+
+.block__dates, .block__timer  {
+    border: 4px solid #000;
+    width: 700px;
+    padding: 20px;
+    box-shadow: 0px 3px 6px 8px rgba(34, 60, 80, 0.2);
+    height: 250px;
+}
+
+.block__dates{
+    margin-bottom: 20px;
+}
+
+.active {
+    box-shadow: 0px 35px 19px -19px rgba(34, 60, 80, 0.2);
+}
+
+.hidden {
+    display: none;
+}
